@@ -1,0 +1,420 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+:root {
+  --bg-color: #081b29;
+  --text-color: #ededed;
+  --hover-color: #ffa500;
+}
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-size: 16px;
+  line-height: 1.5;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+}
+a:hover {
+  color: var(--hover-color);
+}
+/*-----Header start--------*/
+header {
+  position: relative;
+  padding: 0 2rem;
+}
+.bara-de-navigare {
+  width: 100%;
+  height: 3.75rem;
+  max-width: 75rem;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.bara-de-navigare .sigla a {
+  font-weight: bold;
+}
+.bara-de-navigare .sigla a i {
+  font-size: 1.5rem;
+}
+.bara-de-navigare .link-uri {
+  display: flex;
+  gap: 2rem;
+}
+.bara-de-navigare .activare-buton {
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none;
+}
+.meniu-vertical {
+  display: none;
+  position: absolute;
+  right: 2rem;
+  top: 3.75rem;
+  height: 0;
+  width: 18.75rem;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(0.9rem);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.meniu-vertical.deschis {
+  height: 15rem;
+}
+.meniu-vertical li {
+  padding: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*--x---Header-----x---*/
+
+/*----Sectiunea acasa------*/
+section#acasa {
+  background-image: url("../img/cover.jpg");
+  background-size: cover;
+  background-position: center;
+  height: calc(100vh - 3.75rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+}
+#acasa h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-family: "Kaushan Script", cursive;
+}
+#acasa p {
+  margin-top: 2rem;
+  font-size: 2rem;
+  font-family: "Kaushan Script", cursive;
+}
+/*----Sectiunea acasa------*/
+
+/*----Sectiunea despre mine------*/
+section#despre-mine {
+  display: flex;
+  justify-content: center;
+  flex-direction: center;
+  text-align: center;
+}
+.despre-mine {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding-bottom: 3rem;
+}
+.rubrica {
+  font-size: 2rem;
+  text-align: center;
+}
+.poza-mea {
+  position: relative;
+  width: 20rem;
+  height: 20rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.poza-mea img {
+  margin-top: 0.2rem;
+  margin-bottom: 0.2rem;
+  width: 90%;
+  height: 90%;
+  border-radius: 50%;
+}
+.despre-continut {
+  text-align: center;
+}
+.despre-continut h3 {
+  font-size: 2rem;
+}
+.despre-continut h4 {
+  font-size: 1.6rem;
+}
+.despre-continut p {
+  font-size: 1.3rem;
+}
+
+/*--x--Sectiunea despre mine--x----*/
+/*----Sectiunea educatie------*/
+.educatie {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: auto;
+  padding-bottom: 3rem;
+}
+.educatie h2 {
+  font-size: 2.1rem;
+}
+.educatie .studii-orizontal {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+.studii-orizontal .studii-vertical {
+  flex: 1 1 35rem;
+}
+.studii-vertical .titlu {
+  font-size: 1.7rem;
+  margin: 0 0 1.5rem 2rem;
+}
+.studii-vertical .cutia-cu-studii {
+  border-left: 0.2rem solid var(--hover-color);
+}
+.cutia-cu-studii .continutul-studiilor {
+  position: relative;
+  padding-left: 1.5rem;
+}
+.continutul-studiilor .continut {
+  position: relative;
+  padding: 1.5rem;
+  border: 0.2rem solid var(--hover-color);
+  border-radius: 0.5rem;
+  margin-bottom: 2rem;
+}
+.continutul-studiilor .continut .an {
+  padding-bottom: 0.5rem;
+}
+.continutul-studiilor .continut .an i {
+  padding-right: 0.5rem;
+}
+.continutul-studiilor .continut h3 {
+  font-size: 1.6rem;
+}
+.continutul-studiilor .continut h4 {
+  font-size: 1.5rem;
+}
+/*--x--Sectiunea educatie---x---*/
+
+/*---Sectiunea aptitudini------*/
+.aptitudini {
+  min-width: auto;
+  padding-bottom: 7rem;
+}
+.aptitudini h2 {
+  font-size: 2.1rem;
+}
+.aptitudini .aptitudini-orizontal {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+.aptitudini-orizontal .aptitudini-vertical {
+  flex: 1 1 40rem;
+}
+.aptitudini-vertical .titlu {
+  font-size: 1.7rem;
+  margin: 0 0 1.5rem;
+}
+.cutia-cu-aptitudini .continutul-aptitudinilor {
+  position: relative;
+  border: 0.2rem solid var(--hover-color);
+  border-radius: 0.5rem;
+  padding: 0.5rem 1.5rem;
+}
+.continutul-aptitudinilor .progres {
+  padding: 1rem 0;
+}
+.continutul-aptitudinilor .progres h3 {
+  display: flex;
+  justify-content: space-between;
+}
+.continutul-aptitudinilor .progres h3 span {
+  color: aquamarine;
+}
+
+.continutul-aptitudinilor .progres .bara {
+  height: 2.5rem;
+  border-radius: 0.5rem;
+  border: 0.2rem solid var(--hover-color);
+  padding: 0.5rem;
+  margin: 1rem 0;
+}
+.continutul-aptitudinilor .progres .bara span {
+  display: block;
+  height: 100%;
+  border-radius: 0.3rem;
+  background: var(--hover-color);
+}
+
+.aptitudini-vertical:nth-child(1)
+  .continutul-aptitudinilor
+  .progres:nth-child(1)
+  .bara
+  span {
+  width: 90%;
+}
+.aptitudini-vertical:nth-child(1)
+  .continutul-aptitudinilor
+  .progres:nth-child(2)
+  .bara
+  span {
+  width: 80%;
+}
+.aptitudini-vertical:nth-child(1)
+  .continutul-aptitudinilor
+  .progres:nth-child(3)
+  .bara
+  span {
+  width: 30%;
+}
+/*--x--Sectiunea aptitudini---x---*/
+
+/*----Sectiunea contact------*/
+.contact {
+  min-height: auto;
+  padding-bottom: 7rem;
+}
+.contact h2 {
+  font-size: 2.1rem;
+}
+.contact form {
+  max-width: 70rem;
+  margin: 0 auto;
+}
+.contact form .caseta-de-intrare {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.contact form .caseta-de-intrare .camp-de-intrare {
+  position: relative;
+  width: 49%;
+  margin: 0.8rem 0;
+}
+.contact form .caseta-de-intrare .camp-de-intrare input,
+.contact form .camp-ptr-text textarea {
+  width: 100%;
+  height: 100%;
+  padding: 1.5rem;
+  font-size: 1.5rem;
+  color: var(--text-color);
+  background: transparent;
+  border-radius: 0.5rem;
+  border: 0.2rem solid var(--hover-color);
+}
+.contact form .caseta-de-intrare .camp-de-intrare input::placeholder,
+.contact form .camp-ptr-text textarea::placeholder {
+  color: aqua;
+}
+.contact form .camp-ptr-text {
+  position: relative;
+  margin: 0.8 0 2.7rem;
+  display: flex;
+}
+.contact form .buton {
+  display: inline-block;
+  margin-top: 1rem;
+}
+.contact form .buton .btn {
+  padding: 0.5rem 0.5rem;
+  font-size: 1.5rem;
+  color: var(--text-color);
+  border-radius: 0.5rem;
+  background: transparent;
+  border: 0.2rem solid var(--hover-color);
+  cursor: pointer;
+}
+
+/*----Sectiunea contact------*/
+
+/*----Sectiunea footer------*/
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 2rem 9%;
+}
+.footer-text p {
+  font-size: 1.6rem;
+}
+.footer-iconTop a {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.8rem;
+  background: transparent;
+  border: 0.2rem solid var(--hover-color);
+  border-radius: 0.6rem;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.footer-iconTop a i {
+  font-size: 2.4rem;
+  color: var(--hover-color);
+}
+.footer-iconTop a:hover i {
+  color: aqua;
+}
+/*---x---Sectiunea footer----x----*/
+/*-----Responsiv Design-----*/
+@media (max-width: 992px) {
+  .bara-de-navigare .link-uri {
+    display: none;
+  }
+  .bara-de-navigare .activare-buton {
+    display: block;
+  }
+  .meniu-vertical {
+    display: block;
+  }
+}
+@media (max-width: 576px) {
+  .meniu-vertical {
+    left: 2rem;
+    width: unset;
+  }
+  .despre-continut h3 {
+    font-size: 1.6rem;
+  }
+  .despre-continut h4 {
+    font-size: 1.3rem;
+  }
+  .despre-continut p {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 462px) {
+  .educatie {
+    padding: 10rem 4% 3rem 5%;
+  }
+  .studii-orizontal .studii-vertical {
+    flex: 1 1 30rem;
+  }
+  .contact form .caseta-de-intrare .camp-de-intrare input,
+.contact form .camp-ptr-text textarea {
+  padding: .3rem;
+}
+@media (max-width: 371px) {
+  .educatie h2 {
+    font-size: 1.8rem;
+  }
+  .footer-text p {
+    font-size: 1.5rem;
+  }
+  
+}
